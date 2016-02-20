@@ -2,16 +2,11 @@ String.prototype.isEmpty = function() {// Returns if a string has only whitespac
             return (this.length === 0 || !this.trim());
         };
 
-        function Card(front, back){
+        function Card(front){
             this.frontVal = front;
-            this.backVal = back;
 
             this.display = function(side){
-                if( side === 0 ){
                     return this.frontVal;
-                }else{
-                    return this.backVal;
-                }
             };
         }
 
@@ -54,15 +49,13 @@ String.prototype.isEmpty = function() {// Returns if a string has only whitespac
         cardsHandle.cardUpdate();
 
         var userEnter = function(){
-            var nFront = document.getElementById("newFront"),
-                nBack = document.getElementById("newBack");
+            var nFront = document.getElementById("newFrontNote");
 
-            if( nFront.value.isEmpty() || nBack.value.isEmpty() )
+            if( nFront.value.isEmpty())
                 return;
 
-            cardsHandle.cardAdd(nFront.value,nBack.value);
+            cardsHandle.cardAdd(nFront.value);
             nFront.value="";
-            nBack.value="";
             cardsHandle.cardUpdate();
         }
 

@@ -52,25 +52,54 @@ Queue.prototype.dequeue = function() {
 };
 
 function myFunction2() {
-    var string2 = document.getElementById("frm1");
-    var string=
+    var str = document.getElementById("frm1");
     var returning = " ";
-    var i;
+    var i=0;
     var stack= new Stack();
     var queue= new Queue();
     var flag= false;
-    //for the forward run put sentences in queue
-    for (i = 0; i < string.length ;i++) {
-        if (string.charAt(i) ===' '){
-        	window.alert("it worked")
-    	}
-       	returning += string.elements[i].value + "<br>";
-    }
-    //for backward run put things in a stack
-    var j;
-    for (j = string.length; j >= 0 ;j--) {
 
+
+    //for the forward run put sentences in queue
+    while (str.elements[0].value[i]!=null) {
+    	
+    	if(str.elements[0].value[i]=="."){
+    		flag=false;
+    	}
+    	if(str.elements[0].value[i]=="\r" || str.elements[0].value[i]=="\n"){
+    		flag=true;
+    	}
+    	if(flag==true){
+    		//queue.enqueue(str.elements[0].value[i]);
+    		returning += str.elements[0].value[i];
+    	}
+       	i++;
     }
+    var j=i;
+    i--;
+    flag=false;
+
+    //for backward run put things in a stack
+    while (str.elements[0].value[i]!=null){
+    	if(str.elements[0].value[i]=="."){
+    		flag=false;
+    	}
+    	if(str.elements[0].value[i]=="\r" || str.elements[0].value[i]=="\n"){
+    		flag=true;
+    		i--;
+    	}
+    	if(flag==true){
+    		//stack.push(str.elements[0].value[i]);
+    		returning += str.elements[0].value[i];
+    	}
+    	i--;
+    }
+ //   while (queue.size>=0 || stack.size>=0)
+ //   {
+ //   	returning=returning+queue.dequeue()+stack.pop();
+ //   	returning += str.elements[i].value;
+ //   	document.write("you made it");
+ //   }
     document.getElementById("skimmer").innerHTML = returning;
 }
 
