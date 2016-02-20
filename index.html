@@ -18,36 +18,38 @@
 </head>
 <body>
 
-<!-- Dropdown Structures -->
+<!-- Dropdown Structures
 <ul id="dropdown1" class="dropdown-content">
   <li><a href="#!">Settings</a></li>
   <li><a href="#!">Logout</a></li>
   <li class="divider"></li>
-</ul>
+</ul> 
+-->
 
 
   <div class="navbar-fixed">
     <nav>
       <a href="" class="brand-logo"> Study Zone</a>
       <ul class="right hide-on-med-and-down">
+        <!--
         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Account&nbsp&nbsp<i class="fa fa-caret-down"></i></a></li>
+        -->
       </ul>
     </nav>
   </div>
-
 
 
   <div class="splash valign-wrapper">
       <div class="card name-card hoverable center-align valign">
          <h1 class="splash-name">Study Zone</h1>
           <h6 class="white-text">Your Productivity Headquarters</h6>
-          <a class="waves-effect waves-light btn brown"><i class="material-icons right"></i>Sign Up</a>
+          <!--<a class="waves-effect waves-light btn brown"><i class="material-icons right"></i>Sign Up</a> -->
       </div>       
    </div>
 
 
    <div class="center-align">
-      <h2>Modules Below</h2>
+      <h2></h2>
 
 
 
@@ -55,7 +57,6 @@
 
       <div class="row">
          <div class="col s12 l4">
-           <h4>First one</h4>
               <ul class="collapsible" data-collapsible="accordion">
                  <li>
                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
@@ -78,7 +79,6 @@
                 </ul>
        </div>
       <div class="col s12 l4">
-           <h4>Second one</h4>
               <ul class="collapsible" data-collapsible="accordion">
                  <li>
                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
@@ -100,21 +100,10 @@
                  </li>
                 </ul>
        </div>
-
-
-
-
-
-
        <div class="col s12 l4">
-           <h4>Third one</h4>
               <ul class="collapsible" data-collapsible="accordion">
                  <li>
-
-
-
-
-                   <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                   <div class="collapsible-header"><i class="material-icons">filter_drama</i>Notes</div>
                    <div class="collapsible-body"><div id="newNotes" >
                         <center>
                          <textarea> Enter text here...</textarea><input type="text" id="newFrontNote" name="frontNote"/>
@@ -122,11 +111,8 @@
                       Enter text here...</textarea>
                         </center>
                       </div>
-
                       <center><h1>Previous Notes</h1></center>
-
                       <div id="noteButton" ><p id="noteText"></p></div>
-
                         <p align="center">
                           <input type="button" id="prevNote" value="previous" onclick="cardsHandle.cardMove(-1);"/>
                            <span id="positionIndex">0/0</span>
@@ -136,13 +122,7 @@
                    </div>
                  </li>
                  <li>
-
-
-
-
-
-
-                   <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                   <div class="collapsible-header"><i class="material-icons">place</i>Flash Cards</div>
                     <div class="collapsible-body">
                       <div id="newCards" >
                         <center>
@@ -151,11 +131,8 @@
                         <input value="Add" type="button" onclick="userEnter();"/>
                         </center>
                       </div>
-
                       <center><h1>FlashCards</h1></center>
-
                       <div id="cardButton" ><p id="cardText"></p></div>
-
                         <p align="center">
                           <input type="button" id="prevCard" value="previous" onclick="cardsHandle.cardMove(-1);"/>
                            <span id="positionIndex">0/0</span>
@@ -165,12 +142,8 @@
                       <script src="js/flashcard.js"></script>
                     </div>
                   </li>
-
-
-
-                  
                  <li>
-                    <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                    <div class="collapsible-header"><i class="material-icons">whatshot</i>Skimmer</div>
                     <div class="collapsible-body">
                       <form id="frm1" action="#">
                         Text to Skim<br>
@@ -190,22 +163,6 @@
 
 
     <footer id="contact" class="page-footer hoverable">
-      <div class="container">
-        <div class="row">
-          <div class="col s12 m6 l3">
-            <h5 class="white-text">DO WE WANT THIS?</h5>
-            <p class="grey-text text-lighten-4">SUBTEXT</p>
-          </div>
-          <div class="col s12 m6 l9">
-              <ul class="footer-links-ul right">
-                <li><a href="#" target="_blank"><i class="fa fa-linkedin-square fa-4"></i></a></li>         
-                <li><a href="#" target="_blank"><i class="fa fa-github-square fa-4"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fa fa-envelope-o fa-4"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fa fa-mobile fa-4"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
       <div class="footer-copyright">
         <div class="container">
         Study-Zone.net © 2016 
