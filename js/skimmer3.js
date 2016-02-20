@@ -1,4 +1,4 @@
-function myFunction2() {
+function skimmerFuntion3() {
     var str = document.getElementById("frm1");
     var returning = " ";
     var i=0;
@@ -20,7 +20,7 @@ function myFunction2() {
 
        	i++;
     }
-    document.getElementById("skimmer").innerHTML = returning;
+    document.getElementById("skimmer3").innerHTML = returning;
 }
 
 

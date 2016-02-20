@@ -7,14 +7,16 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Study Zone</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/notecard.js">
+  </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="shortcut icon" href="?\favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/styles-sass.css" rel="stylesheet">
-  <script scr="js/Stack.js"></script>
-  <script scr="js/Queue.js"></script>
 </head>
 <body>
 
@@ -100,29 +102,59 @@
                  </li>
                 </ul>
        </div>
+
+
+
+
+
+
+
        <div class="col s12 l4">
               <ul class="collapsible" data-collapsible="accordion">
                  <li>
-                   <div class="collapsible-header"><i class="material-icons">filter_drama</i>Notes</div>
+                   <div class="collapsible-header"><i class="material-icons">subject</i>Notes</div>
                    <div class="collapsible-body"><div id="newNotes" >
-                        <center>
-                         <textarea> Enter text here...</textarea><input type="text" id="newFrontNote" name="frontNote"/>
-                        <input value="Add" type="button" onclick="userEnter();"/>
-                      Enter text here...</textarea>
-                        </center>
-                      </div>
-                      <center><h1>Previous Notes</h1></center>
-                      <div id="noteButton" ><p id="noteText"></p></div>
-                        <p align="center">
-                          <input type="button" id="prevNote" value="previous" onclick="cardsHandle.cardMove(-1);"/>
-                           <span id="positionIndex">0/0</span>
-                           <input type="button" id="nextCard" value="next" onclick="cardsHandle.cardMove(1);"/>
-                        </p>
-                    <script src="js/example.js"></script>
+                   <h3>
+                       Add Notes
+                    </h3>
+                    <div id="div-add">
+                       <form role="form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name"></input>
+                            </div>
+                            <div class="form-group">
+                                  <label for="content">Content</label>
+                                <textarea rows="4" cols="50" class="form-control" id="content"></textarea>
+                            </div>
+                            <button id="add" class="btn btn-primary" type="button">Add</button>
+                            <p>
+                     </form>
+                   </div>
+                    <div id="div-list">
+                        <h3>View/Edit</h3>
+                       <ul id="list">
+                       </ul>
+                    </div>
+                   <div id="div-edit" class="hide">
+                       <form role="form">
+                           <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="edit-name"></input>
+                         </div>
+                           <div class="form-group">
+                                <label for="content">Content</label>
+                               <textarea rows="4" cols="50" class="form-control" id="edit-content"></textarea>
+                           </div>
+                            <button id="save" class="btn btn-primary" type="button">Save</button>
+                            <button id="remove" class="btn btn-danger" type="button">Remove</button>
+                            <button id="cancel" class="btn btn-default" type="button">Cancel</button>
+                        </form>
+                    </div>
                    </div>
                  </li>
                  <li>
-                   <div class="collapsible-header"><i class="material-icons">place</i>Flash Cards</div>
+                   <div class="collapsible-header"><i class="fa fa-bolt"></i>Flash Cards</div>
                     <div class="collapsible-body">
                       <div id="newCards" >
                         <center>
@@ -143,7 +175,7 @@
                     </div>
                   </li>
                  <li>
-                    <div class="collapsible-header"><i class="material-icons">whatshot</i>Skimmer</div>
+                    <div class="collapsible-header"><i class="fa fa-rocket"></i>Skimmer</div>
                     <div class="collapsible-body">
                       <form id="frm1" action="#">
                         Text to Skim<br>

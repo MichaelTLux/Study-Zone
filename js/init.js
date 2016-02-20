@@ -18,14 +18,6 @@ $( document ).ready(function(){
 });
 
 
-/** Once everything, including images, is ready. */
-$( window ).load(function() {
-    $('.name-card').fadeIn(2000);
-    var scrollfireManager = new ScrollFireManager();
-    scrollfireManager.initScrollFire();
-});
-
-
 $(window).resize(function() {   
     if (window.lastWidth <= 720 && window.innerWidth > 720) {
         $('.parallax').parallax();
