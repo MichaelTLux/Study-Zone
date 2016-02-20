@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/styles-sass.css" rel="stylesheet">
+  <script scr="js/Stack.js"></script>
+  <script scr="js/Queue.js"></script>
 </head>
 <body>
 
@@ -111,7 +113,15 @@
                  <li>
                     <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
                     <div class="collapsible-body">
-                      <script src="js/example.js"></script>
+                      <form id="frm1" action="#">
+                        Text to Skim<br>
+                       </form>        
+                      <textarea rows="4" cols="50" name="comment" form="frm1">
+                      Enter text here...</textarea>
+              
+                      <button onclick="myFunction2()">Shorten</button>
+                      <p id="skimmer"></p>
+                      <script src="js/skimmer.js"></script>
                     </div>
                  </li>
                 </ul>
