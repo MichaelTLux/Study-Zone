@@ -1,0 +1,110 @@
+body {
+  color: black;
+  height: 100%;
+  margin: 0 !important; }
+
+blockquote {
+  border-left-color: black; }
+
+footer {
+  background-color: rgba(139,69,19, 0.8) !important; }
+
+footer.page-footer {
+  margin-top: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+h2 {
+  text-align: center; }
+
+i {
+  cursor: pointer; }
+
+nav {
+  background-color: black; }
+
+span.location-span {
+  display: block; }
+
+
+ul.footer-links-ul li {
+  display: inline-block; }
+  ul.footer-links-ul li i {
+    color: white;
+    font-size: 3em;
+    padding: 0 1em 0 1em; }
+
+.brand-logo {
+  padding: 0 15px !important; }
+
+.btn {
+  font-size: initial; }
+
+.card,
+.row {
+  margin: 0 !important; }
+
+.card h2 {
+  margin-top: 2%; }
+
+.learn-more-btn {
+  margin-top: 1em; }
+
+.name-card {
+  background-color: rgba(139,69,19, 0.4) !important;
+  display: none;
+  /* for fadein animation */
+  line-height: 3em;
+  padding: -0em;
+  position: absolute;
+  -webkit-text-shadow: 2px 2px 2px black;
+  -moz-text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px black;
+  -webkit-transform: translateY(250%);
+  width: 100%; }
+  @media screen and (max-width: 399px) {
+    .name-card {
+      -webkit-transform: translateY(100%); } }
+
+.navbar-fixed {
+  height: 0; }
+
+.subtitle {
+  display: block;
+  font-size: .7em; }
+
+.splash {
+  background-repeat: no-repeat !important;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  color: white;
+  height: 100vh;
+  background-position: right top !important;
+  background-color: rgba(0, 0, 0, 0.54) !important;
+  background-blend-mode: luminosity !important; }
+
+  @media screen and (min-width: 641px) {
+    .splash {
+      background: url(../img/bg-large.jpg); } }
+  @media screen and (max-width: 640px) and (min-width: 400px) {
+    .splash {
+      background: url(../img/bg-large.jpg); } }
+  @media screen and (max-width: 399px) {
+    .splash {
+      background: url(../img/bg-large.jpg); } }
+
+@media screen and (min-width: 993px) {
+  nav .brand-logo {
+    float: left;
+    position: relative !important; }
+
+
+/*# sourceMappingURL=styles-sass.css.map */
